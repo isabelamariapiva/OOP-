@@ -1,0 +1,157 @@
+import java.time.LocalDate;
+
+public class Funcionario {
+    String nome;
+    String endereco;
+    int cpf;
+    String telefone;
+    String cargo;
+    LocalDate dataAdmissao;
+    LocalDate dataDeDemissao;
+    String email;
+    char sexo;
+    String nivelDeEscolaridade;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public int getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(int cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public String getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
+
+    public LocalDate getDataAdmissao() {
+        return dataAdmissao;
+    }
+
+    public void setDataAdmissao(LocalDate dataAdmissao) {
+        this.dataAdmissao = dataAdmissao;
+    }
+
+    public LocalDate getDataDeDemissao() {
+        return dataDeDemissao;
+    }
+
+    public void setDataDeDemissao(LocalDate dataDeDemissao) {
+        this.dataDeDemissao = dataDeDemissao;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public char getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(char sexo) {
+        this.sexo = sexo;
+    }
+
+    public String getNivelDeEscolaridade() {
+        return nivelDeEscolaridade;
+    }
+
+    public void setNivelDeEscolaridade(String nivelDeEscolaridade) {
+        this.nivelDeEscolaridade = nivelDeEscolaridade;
+    }
+}
+
+
+
+
+import java.time.LocalDate;
+import java.util.Scanner;
+import java.time.format.DateTimeFormatter;
+public class ObjetoFuncionario {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        Funcionario funcionario1 = new Funcionario();
+
+        System.out.println("Insira o nome do funcionario: ");
+        String nome = ler.nextLine();
+        System.out.println("Insira o endreço da pessoa: ");
+        String endereco = ler.nextLine();
+        System.out.println("Insira cpf do funcionario: ");
+        int cpf = ler.nextInt();
+        ler.nextLine();
+        System.out.println("Insira o telefone do funcionario: ");
+        String telefone = ler.nextLine();
+        System.out.println("Insira o nome do cargo: ");
+        String cargo = ler.nextLine();
+        System.out.println("Insira o data de Admissao do funcionario: ");
+        String dataAdmissaoTexto = ler.nextLine();
+        LocalDate dataAdmissao = LocalDate.parse(dataAdmissaoTexto, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+        System.out.println("Insira  Data De Demissao do funcionario: ");
+        String dataDeDemissaoTexto = ler.nextLine();
+        LocalDate dataDeDemissao = LocalDate.parse(dataDeDemissaoTexto, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+        System.out.println("Insira o email do funcionario: ");
+        String email = ler.nextLine();
+        System.out.println("Insira o sexo do funcionario: ");
+        char sexo = ler.nextLine().charAt(0);
+        System.out.println("Insira o nivel de escolaridade do funcionario: ");
+        String nivelDeEscolaridade = ler.nextLine();
+
+
+        funcionario1.setNome(nome);
+        funcionario1.setEndereco(endereco);
+        funcionario1.setCpf(cpf);
+        funcionario1.setTelefone(telefone);
+        funcionario1.setCargo(cargo);
+        funcionario1.setDataAdmissao(dataAdmissao);
+        funcionario1.setDataDeDemissao(dataDeDemissao);
+        funcionario1.setEmail(email);
+        funcionario1.setSexo(sexo);
+        funcionario1.setNivelDeEscolaridade(nivelDeEscolaridade);
+
+        System.out.println("-------funcionario--------- ");
+        System.out.println("nome: " + funcionario1.getNome());
+        System.out.println("endereço: " + funcionario1.getEndereco());
+        System.out.println("Cpf: " + funcionario1.getCpf());
+        System.out.println("telefone: " + funcionario1.getTelefone());
+        System.out.println("cargo: " + funcionario1.getCargo());
+        System.out.println("data de adimissao: " + funcionario1.getDataAdmissao());
+        System.out.println("data de demissao: " + funcionario1.getDataDeDemissao());
+        System.out.println("email: "+ funcionario1.getEmail());
+        System.out.println("sexo: "+ funcionario1.getSexo());
+        System.out.println("nivel de escolaridade: " + funcionario1.getNivelDeEscolaridade());
+
+    }
+}
+
