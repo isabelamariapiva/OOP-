@@ -1,0 +1,54 @@
+public class Convenio {
+    String nome;
+    String plano;
+    double tarifa;
+
+    public  String getNome() {
+        return nome;
+    }
+    public void setNome(String nome){
+    this.nome= nome;
+    }
+    public String getPlano(){
+        return plano;
+    }
+    public void setPlano(String plano){
+        this.plano =plano;
+    }
+    public double getTarifa() {
+        return tarifa;
+    }
+    public  void setTarifa(double tarifa){
+        this.tarifa= tarifa;
+    }
+}
+
+
+
+
+import java.util.Scanner;
+
+public class ObjetoConvenio {
+    public static void main(String[] args) {
+        Scanner ler= new Scanner (System.in);
+        Convenio convenio1 = new Convenio();
+
+        System.out.println("insira o nome  : ");
+        String nome= ler.nextLine();
+        System.out.println("insira o plano: ");
+        String plano = ler.nextLine();
+        System.out.println("insira a tarifa: ");
+                double tarifa = ler.nextDouble();
+
+        convenio1.setNome(nome);
+        convenio1.setPlano(plano);
+        convenio1.setTarifa(tarifa);
+
+        System.out.println("---Convenio---");
+        System.out.println("nome: "+convenio1.getNome());
+        System.out.println("plano: "+convenio1.getPlano());
+        System.out.println("tarifa: "+convenio1.getTarifa());
+
+    }
+}
+
