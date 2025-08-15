@@ -1,0 +1,50 @@
+import java.util.Scanner;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+public class ObjetoPaciente {
+    public static void main(String[] args) {
+        Scanner ler= new Scanner (System.in);
+         Paciente paciente1 = new  Paciente();
+
+         System.out.println("Insira nome do paciente: ");
+             String nome = ler.nextLine();
+             System.out.println("Insira endereco paciente : ");
+                 String endereco = ler.nextLine();
+                 System.out.println("insira o cpf paciente: " );
+                     int cpf = ler.nextInt();
+                     ler.nextLine();
+                     System.out.println("insira o sexo do paciente: ");
+                         char sexo =ler.nextLine().charAt(0);
+                         System.out.println("Insira o nivel de escolaridade do paciente: ");
+                         String nivelDeEscolaridade = ler.nextLine();
+                         System.out.println("insira o email do paciente:");
+                         String email = ler.nextLine();
+                          System.out.println("insira a data de nascimento: ");
+                          String dataDeNascimentoTexto = ler.nextLine();
+                          LocalDate dataDeNascimento = LocalDate.parse(
+                                  dataDeNascimentoTexto,
+                          DateTimeFormatter.ofPattern("dd/MM/yyyy")
+                          );
+                         System.out.println("insira o telefone do paciente: ");
+                         String telefone =ler.nextLine();
+
+                         paciente1.setNome(nome);
+                         paciente1.setEndereco(endereco);
+                         paciente1.setCpf(cpf);
+                         paciente1.setSexo(sexo);
+                         paciente1.setNivelDeEscolaridade(nivelDeEscolaridade);
+                         paciente1.setEmail(email);
+                         paciente1.setDataDeNascimento(dataDeNascimento);
+                         paciente1.setTelefone(telefone);
+
+                         System.out.println("------Paciente------");
+                         System.out.println("nome: "+ paciente1.getNome());
+                         System.out.println("endereço: "+paciente1.getEndereco());
+                         System.out.println("cpf: "+paciente1.getCpf());
+                         System.out.println("sexo: "+paciente1.getSexo());
+                         System.out.println("escolaridade: "+ paciente1.getNivelDeEscolaridade());
+                         System.out.println("email: "+paciente1.getEmail());
+                         System.out.println(" data de nascimento: "+paciente1.getDataDeNascimento());
+                         System.out.println("telefone: "+paciente1.getTelefone());
+    }
+}
