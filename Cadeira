@@ -56,9 +56,9 @@ import java.util.Scanner;
 public class ObjetoCadeira {
     public static void main(String[] args) {
         Scanner ler = new Scanner(System.in);
-        Cadeira[] cadeira1 = new Cadeira[4];
+        Cadeira[] cadeira1 = new Cadeira[3];
 
-        for (int i = 1; i < 4; i++) {
+        for (int i = 1; i < 3; i++) {
             cadeira1[i] = new Cadeira();
 
             System.out.println("Adicione os dados da cadeira " + (i + 1));
@@ -81,7 +81,7 @@ public class ObjetoCadeira {
             cadeira1[i].setMaterial(material);
             cadeira1[i].setPreco(preco);
 
-        }       for (int i = 1; i <4 ; i++) {
+        }       for (int i = 1; i <3 ; i++) {
                 System.out.println("------ Cadastro da "+i+"° cadeira ------");
                 System.out.println("A cor da cadeira é: " + cadeira1[i].getCor());
                 System.out.println("O  ambiente de uso é: " + cadeira1[i].getAmbienteUso());
