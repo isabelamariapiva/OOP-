@@ -43,31 +43,41 @@ public class Aviao {
 
 
 
+
+
 import java.util.Scanner;
 public class ObjetoAviao {
-    public static void main(String []args){
-        Scanner ler =new Scanner(System.in);
-        Aviao aviao1 = new Aviao();
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        Aviao[] aviao1 = new Aviao[4];
 
-        System.out.println("Insira o tipo: ");
-        String tipo = ler.nextLine();
-        System.out.println("Insira o cor: ");
-        String cor = ler.nextLine();
-        System.out.println("Insira o velocidade: ");
-        double velocidade = ler.nextDouble();
-        System.out.println("Insira a quantidade de assento: ");
-        int qtdeAssento = ler.nextInt();
+        for (int i = 1; i < 3; i++) {
+            aviao1[i] = new Aviao();
 
-        aviao1.setTipo(tipo);
-        aviao1.setCor(cor);
-        aviao1.setVelocidade(velocidade);
-        aviao1.setQtdeAssento(qtdeAssento);
+            System.out.println("Adicione os dados do avião " + (i + 1));
+            System.out.println("Insira o tipo: ");
+            String tipo = ler.nextLine();
+            System.out.println("Insira o cor: ");
+            String cor = ler.nextLine();
+            System.out.println("Insira o velocidade: ");
+            double velocidade = ler.nextDouble();
+            System.out.println("Insira a quantidade de assento: ");
+            int qtdeAssento = ler.nextInt();
+            ler.nextLine();
 
-        System.out.println("------Cadastro-------");
-        System.out.println("O tipo do avião é: "+aviao1.getTipo());
-        System.out.println("O cor do avião é: "+aviao1.getCor());
-        System.out.println("O velocidade do avião é: "+aviao1.getVelocidade());
-        System.out.println("O quantidade de assento do avião é: "+aviao1.getQtdeAssento());
+            aviao1[i].setTipo(tipo);
+            aviao1[i].setCor(cor);
+            aviao1[i].setVelocidade(velocidade);
+            aviao1[i].setQtdeAssento(qtdeAssento);
 
+        }       for (int i = 1; i <4 ; i++) {
+                System.out.println("------ Cadastro do "+i+"° aviao ------");
+                System.out.println("O tipo do avião é: " + aviao1[i].getTipo());
+                System.out.println("O cor do avião é: " + aviao1[i].getCor());
+                System.out.println("O velocidade do avião é: " + aviao1[i].getVelocidade());
+                System.out.println("O quantidade de assento do avião é: " + aviao1[i].getQtdeAssento());
+
+            }
+        }
     }
-}
+
