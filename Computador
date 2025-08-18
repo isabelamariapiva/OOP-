@@ -1,0 +1,81 @@
+public class Computador {
+    String cor;
+    double armazenamento;
+    String modelo;
+    double preco;
+
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo (String modelo) {
+        this.modelo = modelo;
+    }
+
+    public double getArmazenamento() {
+        return armazenamento;
+    }
+
+    public void setArmazenamento(double armazenamento) {
+        this.armazenamento = armazenamento;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+}
+
+
+
+import java.util.Scanner;
+public class ObjetoComputador {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        Computador[] computador1 = new Computador[3];
+
+        for (int i = 0; i < 3; i++) {
+            computador1[i] = new Computador();
+
+            System.out.println("Adicione os dados do computador " + (i + 1));
+            System.out.println("Insira a cor: ");
+            String cor = ler.nextLine();
+            System.out.println("Insira o modelo: ");
+            String modelo = ler.nextLine();
+            System.out.println("Insira o armazenamento(gb): ");
+            double armazenamento = ler.nextDouble();
+            ler.nextLine();
+            System.out.println("Insira o preço: ");
+            double preco = ler.nextDouble();
+            ler.nextLine();
+
+
+            computador1[i].setCor(cor);
+            computador1[i].setModelo(modelo);
+            computador1[i].setArmazenamento(armazenamento);
+            computador1[i].setPreco(preco);
+
+        }       for (int i = 0; i <3 ; i++) {
+                System.out.println("------ Cadastro da "+i+"° computador ------");
+                System.out.println("A cor do computador é: " + computador1[i].getCor());
+                System.out.println("A marca do computador  é: " + computador1[i].getModelo());
+                System.out.println("O material do computador  é: " + computador1[i].getArmazenamento());
+                System.out.println("O preço do computador é: " + computador1[i].getPreco());
+
+            }
+        }
+    }
+
+
+
+
