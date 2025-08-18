@@ -1,0 +1,73 @@
+public class Aviao {
+    String tipo;
+    String cor;
+    double velocidade;
+    int qtdeAssento;
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+
+    public double getVelocidade() {
+        return velocidade;
+    }
+
+    public void setVelocidade(double velocidade) {
+        this.velocidade = velocidade;
+    }
+
+    public int getQtdeAssento() {
+        return qtdeAssento;
+    }
+
+    public void setQtdeAssento(int qtdeAssento) {
+        this.qtdeAssento = qtdeAssento;
+    }
+}
+
+
+
+
+
+
+
+import java.util.Scanner;
+public class ObjetoAviao {
+    public static void main(String []args){
+        Scanner ler =new Scanner(System.in);
+        Aviao aviao1 = new Aviao();
+
+        System.out.println("Insira o tipo: ");
+        String tipo = ler.nextLine();
+        System.out.println("Insira o cor: ");
+        String cor = ler.nextLine();
+        System.out.println("Insira o velocidade: ");
+        double velocidade = ler.nextDouble();
+        System.out.println("Insira a quantidade de assento: ");
+        int qtdeAssento = ler.nextInt();
+
+        aviao1.setTipo(tipo);
+        aviao1.setCor(cor);
+        aviao1.setVelocidade(velocidade);
+        aviao1.setQtdeAssento(qtdeAssento);
+
+        System.out.println("------Cadastro-------");
+        System.out.println("O tipo do avião é: "+aviao1.getTipo());
+        System.out.println("O cor do avião é: "+aviao1.getCor());
+        System.out.println("O velocidade do avião é: "+aviao1.getVelocidade());
+        System.out.println("O quantidade de assento do avião é: "+aviao1.getQtdeAssento());
+
+    }
+}
