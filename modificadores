@@ -1,0 +1,116 @@
+package Modificadores;
+
+public class Pessoa {
+    private String nome;
+    private int idade;
+    private String profissao;
+    private Automovel automovel;
+
+    public void comprcarro(String cor, String nome, int velocidade){
+        automovel = new Automovel();
+        automovel.setCor(cor);
+        automovel.setNome(nome);
+        automovel.setVelocidade(velocidade);
+    }
+
+    public Automovel getAutomovel() {
+        return automovel;
+    }
+
+    public void setAutomovel(Automovel automovel) {
+        this.automovel = automovel;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+    public String getProfissao(){
+        return profissao;
+}
+    public void setProfissao(String profissao){
+        this.profissao=profissao;
+    }
+}
+
+
+
+
+package Modificadores;
+
+public class Automovel {
+    private int velocidade;
+    private String cor;
+    private String nome;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+
+    public int getVelocidade() {
+        return velocidade;
+    }
+
+    public void setVelocidade(int velocidade) {
+        this.velocidade = velocidade;
+    }
+}
+
+
+
+
+package modificadores;  // Corrigido o nome do pacote (não pode começar com número)
+
+import java.util.Scanner;
+
+public class ObjetoPessoaAutomovel {
+
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);// Cria a pessoa
+        Pessoa pessoa1 = new Pessoa();
+
+        System.out.print("Informe a cor do carro: ");
+        String cor = ler.next();
+
+        System.out.print("Informe o nome do carro: ");
+        String nome = ler.next();
+
+        System.out.print("Informe a velocidade do carro: ");
+        int velocidade = ler.nextInt();
+
+        // Pessoa compra o carro
+        pessoa1.compracarro(cor, nome, velocidade);
+
+        // Recupera o carro da pessoa
+        Automovel carro = pessoa1.getAutomovel();
+
+        // Exibe as informações do carro
+        System.out.println("O carro comprado foi " + carro.getNome() +" da cor " + "da cor " +carro.getCor() + " que atinge a velocidade de " + carro.getVelocidade());
+
+        ler.close();
+    }
+}
+
