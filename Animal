@@ -1,59 +1,49 @@
-import java.util.Scanner;
+public class Animal {
+    private double tamanho;
+    private String cor;
 
-public class ConstrutorAnimal {
-    public static void main(String[] args) {
-        Scanner ler = new Scanner(System.in);
-        Animal[] animal1 = new Animal[3];
+    public Animal (){
+    }
+    public Animal (double tamanho){
+        this.tamanho=tamanho;
+    }
+    public Animal (double tamanho, String cor){
+        this.tamanho=tamanho;
+        this.cor=cor;
+    }
 
-        for (int i = 0; i < 3; i++) {
-            System.out.println("Insira o tamanho do " + (i + 1) + "° animal: ");
-            float tamanho = ler.nextFloat();
-            ler.nextLine();
-            System.out.println("Insira a cor do " + (i + 1) + "° animal: ");
-            String cor = ler.nextLine();
+    public double getTamanho() {
+        return tamanho;
+    }
 
-            animal1[i] = new Animal();
-            animal1[i].setTamanho(tamanho);
-            animal1[i].setCor(cor);
+    public void setTamanho(double tamanho) {
+        this.tamanho = tamanho;
+    }
 
-        }
-        for (int i = 0; i < 3; i++) {
-            System.out.println("-- Dados do "+(i+1)+" Animais ---");
-            System.out.println((i + 1) + "° Animal:");
-            System.out.println("Tamanho: " + animal1[i].getTamanho());
-            System.out.println("Cor: " + animal1[i].getCor());
+    public String getCor() {
+        return cor;
+    }
 
-        }
+    public void setCor(String cor) {
+        this.cor = cor;
     }
 }
 
 
 
+public class ConstrutorAnimal {
+    public static void main (String [] args){
+        Animal animal1= new Animal ();
+        Animal animal2= new Animal (4.44);
+        Animal animal3= new Animal (4.44, "Amarelo");
 
-
-    public class Animal {
-        private float tamanho;
-        private String cor;
-
-        public Animal() {
-        }
-    public  Animal(String cor, float tamanho){
-      this.cor= cor;
-      this.tamanho= tamanho;
-  }
-        public float getTamanho() {
-            return tamanho;
-        }
-
-        public void setTamanho(float tamanho) {
-            this.tamanho = tamanho;
-        }
-
-        public String getCor() {
-            return cor;
-        }
-
-        public void setCor(String cor) {
-            this.cor = cor;
-        }
+        System.out.println ("-------- Cadastro dos Animais: -------");
+        System.out.println ("----- Animal 01-----");
+        System.out.println ("----- Animal 02-----");
+        System.out.println ("Tamanho: " + animal2.getTamanho());
+        System.out.println ("----- Animal 03-----");
+        System.out.println ("Tamanho: " + animal3.getTamanho());
+        System.out.println ("Cor: " + animal3.getCor());
+    }
 }
+
