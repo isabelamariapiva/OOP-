@@ -1,0 +1,29 @@
+package enumerador;
+
+    public enum Meses {
+        JANEIRO,
+        FEVEREIRO,
+        MARCO,
+        ABRIL,
+        MAIO,
+        JUNHO,
+        JULHO,
+        AGOSTO,
+        SETEMBRO,
+        OUTUBRO,
+        NOVEMBRO,
+        DEZEMBRO;
+
+
+}
+
+
+package enumerador;
+
+public class PrincipalEnumerador {
+    public static void main(String[] args) {
+        for (Meses mes : Meses.values()) {
+            System.out.println(mes);
+        }
+    }
+}
