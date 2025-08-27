@@ -1,0 +1,59 @@
+import java.util.Scanner;
+
+public class ConstrutorAnimal {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        Animal[] animal1 = new Animal[3];
+
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Insira o tamanho do " + (i + 1) + "° animal: ");
+            float tamanho = ler.nextFloat();
+            ler.nextLine();
+            System.out.println("Insira a cor do " + (i + 1) + "° animal: ");
+            String cor = ler.nextLine();
+
+            animal1[i] = new Animal();
+            animal1[i].setTamanho(tamanho);
+            animal1[i].setCor(cor);
+
+        }
+        for (int i = 0; i < 3; i++) {
+            System.out.println("-- Dados do "+(i+1)+" Animais ---");
+            System.out.println((i + 1) + "° Animal:");
+            System.out.println("Tamanho: " + animal1[i].getTamanho());
+            System.out.println("Cor: " + animal1[i].getCor());
+
+        }
+    }
+}
+
+
+
+
+
+    public class Animal {
+        private float tamanho;
+        private String cor;
+
+        public Animal() {
+        }
+    public  Animal(String cor, float tamanho){
+      this.cor= cor;
+      this.tamanho= tamanho;
+  }
+        public float getTamanho() {
+            return tamanho;
+        }
+
+        public void setTamanho(float tamanho) {
+            this.tamanho = tamanho;
+        }
+
+        public String getCor() {
+            return cor;
+        }
+
+        public void setCor(String cor) {
+            this.cor = cor;
+        }
+}
