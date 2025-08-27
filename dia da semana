@@ -1,0 +1,20 @@
+package enumerador;
+
+    public enum DiasDaSemana {
+        SEGUNDA,
+        TERCA,
+        QUARTA,
+        QUINTA,
+        SEXTA,
+        SABADO,
+        DOMINGO;
+
+}
+
+package enumerador;
+public class PrincipalEnumerador {
+    public static void main(String[] args) {
+        DiasDaSemana dia = DiasDaSemana.SEGUNDA;
+        System.out.println(dia);
+    }
+}
