@@ -1,0 +1,51 @@
+public class Produto {
+    private String nome;
+    private double preco;
+
+    public Produto(String nome, double preco){
+        this.nome = nome;
+        setPreco(preco);
+    }
+    public String getNome(){
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public double getPreco(){
+        return preco;
+    }
+    public void setPreco(double preco) {
+        if(preco >= 0) {
+            this.preco = preco;
+        } else{
+            System.out.println("Preço inválido! Não pode ser negativo.");
+        }
+    }
+    public void exibirInformacoes(){
+        System.out.println("Produto: "+nome+", Preço: "+preco);
+    }
+}
+
+
+
+
+public class ObjetoProduto {
+    public static void main(String []args){
+        Produto prod = new Produto ("Queijo Prato", 50.00);
+
+        System.out.println(prod.getNome() + "  "+ prod.getPreco());
+
+        prod.setPreco(53);
+        System.out.println(prod.getPreco());
+
+        prod.setPreco(56);
+        System.out.println(prod.getPreco());
+
+        prod.setNome("Queijo Parmesão");
+        prod.setPreco(80);
+        System.out.println(prod.getNome());
+        System.out.println(prod.getPreco());
+    }
+}
