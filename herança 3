@@ -1,0 +1,131 @@
+package Heranca;
+
+public class Automovel extends Veiculo {
+    private int numPortas;
+    private String motor;
+
+    public Automovel(String marca, String modelo, int ano, String cor, int numPortas, String motor){
+        super(marca, modelo, ano, cor);
+        this.numPortas = numPortas;
+        this.motor = motor;
+    }
+
+    public int getNumPortas() {
+        return numPortas;
+    }
+
+    public void setNumPortas(int numPortas) {
+        this.numPortas = numPortas;
+    }
+
+    public String getMotor() {
+        return motor;
+    }
+
+    public void setMotor(String motor) {
+        this.motor = motor;
+    }
+}
+
+
+package Heranca;
+
+public class Moto extends Veiculo {
+    private String cilindrada;
+
+    public Moto(String marca, String modelo, int ano, String cor, String cilindrada){
+        super(marca, modelo, ano, cor);
+        this.cilindrada = cilindrada;
+    }
+
+    public String getCilindrada() {
+        return cilindrada;
+    }
+
+    public void setCilindrada(String cilindrada) {
+        this.cilindrada = cilindrada;
+    }
+}
+
+
+package Heranca;
+
+public class Veiculo {
+    private String marca;
+    private String modelo;
+    private int ano;
+    private String cor;
+
+    public Veiculo(String marca, String modelo, int ano, String cor) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.ano = ano;
+        this.cor = cor;
+    }
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public void setAno(int ano) {
+        this.ano = ano;
+    }
+
+    public int getAno() {
+        return ano;
+    }
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+
+}
+
+
+
+
+    package Heranca;
+
+    public class ObjetoPrincipal {
+        public static void main(String [] args) {
+
+            Veiculo veiculo = new Veiculo("Ferrari", "12Cilindr", 2025, "Vermelha");
+            System.out.println("Veiculo:");
+            System.out.println("Marca:" + veiculo.getMarca());
+            System.out.println("Modelo:" + veiculo.getModelo());
+            System.out.println("Ano:" + veiculo.getAno());
+            System.out.println("Cor:" + veiculo.getCor());
+
+            Automovel automovel = new Automovel("Porsche", "718 Boxster", 2016, "Rosa", 2, "motores 2.0 turbo de 4 cilindros e motores aspirados de 4.0 litros com 6 cilindros");
+            System.out.println("\nAutomóvel:");
+            System.out.println("Marca:" + automovel.getMarca());
+            System.out.println("Modelo:" + automovel.getModelo());
+            System.out.println("Ano:" + automovel.getAno());
+            System.out.println("Cor:" + automovel.getCor());
+            System.out.println("Numero de portas:" + automovel.getNumPortas());
+            System.out.println("Motor:" + automovel.getMotor());
+
+            Moto moto = new Moto("Ducati", "Diavel V4", 2025, "Vermelha", "1.158 cc de cilindrada");
+            System.out.println("\nMoto:");
+            System.out.println("Marca:" + moto.getMarca());
+            System.out.println("Modelo:" + moto.getModelo());
+            System.out.println("Ano:" + moto.getAno());
+            System.out.println("Cor:" + moto.getCor());
+            System.out.println("Cilindrada:" + moto.getCilindrada());
+
+        }
+    }
+
