@@ -1,0 +1,113 @@
+package Heranca;
+
+public class Pessoa {
+    private String nome;
+    private String telefone;
+
+    public Pessoa(String nome, String telefone) {
+        this.nome = nome;
+        this.telefone = telefone;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+}
+
+
+
+
+package Heranca;
+
+public class PessoaFisica extends Pessoa {
+    private String cpf;
+    private String rg;
+
+    public PessoaFisica(String nome, String telefone, String cpf, String rg) {
+        super(nome, telefone); // herdando os atributos da superclasse
+        this.cpf = cpf;
+        this.rg = rg;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+    public String getRg() {
+        return rg;
+    }
+
+    public void setRg(String rg) {
+        this.rg = rg;
+    }
+}
+
+
+
+
+package Heranca;
+
+public class PessoaJuridica extends Pessoa {
+    private String cnpj;
+
+    public PessoaJuridica(String nome, String telefone, String cnpj) {
+        super(nome, telefone);
+        this.cnpj = cnpj;
+    }
+
+    public String getCnpj() {
+        return cnpj;
+    }
+
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
+    }
+}
+
+
+
+
+package Heranca;
+
+public class ObjetoPrincipal {
+    public static void main(String[] args) {
+
+        // Criando uma Pessoa
+        Pessoa pessoa = new Pessoa("João da Silva", "(11) 9994-9999");
+        System.out.println("\nPessoa:");
+        System.out.println("Nome: " + pessoa.getNome());
+        System.out.println("Telefone: " + pessoa.getTelefone());
+
+        // Criando uma Pessoa Física
+        PessoaFisica pessoaFisica = new PessoaFisica("João da Silva", "(11) 9999-9999", "123.456.789-00", "300.456.989-X");
+        System.out.println("\nPessoa Física:");
+        System.out.println("Nome: " + pessoaFisica.getNome());
+        System.out.println("Telefone: " + pessoaFisica.getTelefone());
+        System.out.println("CPF: " + pessoaFisica.getCpf());
+        System.out.println("RG: " + pessoaFisica.getRg());
+
+        // Criando uma Pessoa Jurídica
+        PessoaJuridica pessoaJuridica = new PessoaJuridica("Empresa XYZ", "(11) 9999-9999", "12.345.678/0001-23");
+        System.out.println("\nPessoa Jurídica:");
+        System.out.println("Nome: " + pessoaJuridica.getNome());
+        System.out.println("Telefone: " + pessoaJuridica.getTelefone());
+        System.out.println("CNPJ: " + pessoaJuridica.getCnpj());
+    }
+}
+
+
