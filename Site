@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class = "container">
+        <h1> meu portifólio iniciar </h1>
+         <nav>
+            <ul>
+                <li><a href= "#sobre">sobre mim </a></li>
+                <li><a href= "#hobbies"> hobbies </a></li>
+                 <li><a href= "#habilidades" > habilidades</a></li>
+                 <li><a href ="#midias"> habilidades </a></li> 
+                 <li><a href="#contatos">contatos </a></li>
+                
+            </ul>
+         </nav>
+        </div>
+    </header>
+     <div class="container">
+        <main>
+            <section id=" sobre " class ="secao">
+             <h2> sobre mim </h2>
+             <p>
+                 olá, meu nome é Isabela Maria  e sou aluna de tecnologia,
+                 <br> faço <strong>Analise de Desenvolvimento de sistema</strong>
+                 <br> são muitos assusntos complexos abordadas nesse curso,
+                 <br>gosto dos meus <strong> professores</strong>
+                 <p>
+                    não seguirei carreira na área da tecnologia da informação
+                    <br> pois não me identifico com a área,
+                    <br> mas sou grata pela oportunidade!
+                    <br> pretendo fazer faculdade, nao tenho certeza da área, 
+                    <br> mas quero algo relacionado <em> a estética</em>.
+                 </p>
+             </p> 
+            </section>
+            <section id="hobbies" class=""secao>
+                <h2>Meus hobbies</h2>
+                <ul>
+                    <li>Assistir séries </li>
+                    <li> passear no shopping </li>
+                    <li>Me arrumar </li>
+                    <li>fazer compras </li>
+                     <ul>
+                            <li>cosméticos</li>
+                            <li>roupa</li>
+                            <li> acessórios</li>
+                        </ul>
+                    </ul>
+                <h3> Top  3 lojas Favoritas </h3>
+                <ol>
+                <li> Sephora</li>
+                <li>Zara </li>
+                <li> </li>
+                </ol>
+                <h3>produtos da loja q eu gosto</h3>
+                <dl>
+                    <dt>blush rare beauty</dt>
+                    <dt> iluminador too faced</dt>
+                    </p>
+                    <dt></dt>
+                </dl>
+                <img src="https://img.freepik.com/vetores-gratis/descontos-de-venda-sazonais-compra-de-presentes-visitas-a-boutiques-compras-de-luxo-cupons-promocionais-de-reducao-de-precos-ofertas-especiais-de-ferias-ilustracao-vetorial-de-metafora-de-conceito-isolado_335657-2766.jpg?semt=ais_hybrid&w=740&q=80"
+            </section>
+            <section id =" habilidades" class ="secao">
+                <h2> tabela de habilidades</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <tr>tecnologia</tr>
+                            <tr>nivel de conhecimento</tr>
+                            <tr>Ano de programação</tr>
+                        </tr>
+                    </thead>
+                    <body>
+                        <td>  HTML v4</td>
+                        <td>avançado </td>
+                        <td>2012 </Td>
+                    </tr>
+                    <tr>
+                        <td>java</td>
+                        <td>intermediario</td>
+                        <td>2025</td>
+                    </tr>
+                    <tr>
+                        <td>CSS v4</td>
+                        <td> Iniciante </td>
+                        <td>2025</td>
+                    </tr>
+                    </body>
+                </tablle>
+            </section>
+            <section id="mídia" class=" sacao">
+                <h2>mídia</h2>
+               <h3>Meu video vida de programador</h3>
+               <video width= "100%" controls>
+                source src="type="video"/mp4
+
+               </video>
+               
+       
+            </section>
+        </main>
+     </dib>
+</body>
+</html>
