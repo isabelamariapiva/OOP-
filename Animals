@@ -1,0 +1,94 @@
+package animal;
+
+public class Animal {
+    private String nome;
+    private String sexo;
+    private String raca;
+
+    public Animal (String nome, String sexo, String raca) {
+        this.nome = nome;
+        this.sexo = sexo;
+        this.raca = raca;
+    }
+    public void dormir() {
+        System.out.println("Dormindo");
+    }
+    public void caminhar(){
+        System.out.println("Caminhando");
+    }
+    public void correr(){
+        System.out.println("Correndo");
+    }
+    public void emitirSom(){
+        System.out.println("Emitindo som");
+    }
+}
+
+
+package animal;
+
+public class Gato extends Animal {
+    public Gato(String nome, String sexo, String raca){
+        super(nome, sexo, raca);
+    }
+
+    @Override
+    public void emitirSom(){
+        System.out.println("O gato esta miando.");
+    }
+}
+
+package animal;
+
+public class Leao extends Animal {
+    public Leao(String nome, String sexo, String raca){
+        super(nome, sexo, raca);
+    }
+
+    @Override
+    public void emitirSom(){
+        System.out.println("O leao esta rugindo.");
+    }
+}
+
+
+package animal;
+
+public class Lobo extends Animal {
+    public Lobo(String nome, String sexo, String raca){
+        super(nome, sexo, raca);
+    }
+
+    @Override
+    public void emitirSom(){
+        System.out.println("O lobo esta uivando.");
+    }
+}
+
+
+package animal;
+
+public class Tigre extends Animal {
+    public Tigre(String nome, String sexo, String raca){
+        super(nome, sexo, raca);
+    }
+
+    @Override
+    public void emitirSom(){
+        System.out.println("O tigre esta roncando.");
+    }
+}
+
+
+package animal;
+
+public class Cachorro extends Animal {
+    public Cachorro(String nome, String sexo, String raca){
+        super(nome, sexo, raca);
+    }
+
+    @Override
+    public void emitirSom(){
+        System.out.println("O cachorro esta latindo.");
+    }
+}
