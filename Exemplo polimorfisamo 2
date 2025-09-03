@@ -1,0 +1,34 @@
+package Exemplo02;
+
+public interface Animal {
+    void dormir();
+
+    void caminhar();
+
+    void correr();
+
+    void emitirSom();
+}
+
+package Exemplo02;
+
+public class Lobo implements Exemplo02.Animal {
+    public Lobo() { /* compiled code */ }
+
+    public void dormir() { /* compiled code */ }
+
+    public void caminhar() { /* compiled code */ }
+
+    public void correr() { /* compiled code */ }
+
+    public void emitirSom() { /* compiled code */ }
+}
+
+
+package Exemplo02;
+
+public class Principal {
+    public Principal() { /* compiled code */ }
+
+    public static void main(java.lang.String[] args) { /* compiled code */ }
+}
