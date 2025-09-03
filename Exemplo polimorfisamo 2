@@ -13,22 +13,22 @@ public interface Animal {
 package Exemplo02;
 
 public class Lobo implements Exemplo02.Animal {
-    public Lobo() { /* compiled code */ }
+    public Lobo() 
 
-    public void dormir() { /* compiled code */ }
+    public void dormir() 
 
-    public void caminhar() { /* compiled code */ }
+    public void caminhar()
 
-    public void correr() { /* compiled code */ }
+    public void correr() 
 
-    public void emitirSom() { /* compiled code */ }
+    public void emitirSom() 
 }
 
 
 package Exemplo02;
 
 public class Principal {
-    public Principal() { /* compiled code */ }
+    public Principal() 
 
-    public static void main(java.lang.String[] args) { /* compiled code */ }
+    public static void main(java.lang.String[] args)
 }
